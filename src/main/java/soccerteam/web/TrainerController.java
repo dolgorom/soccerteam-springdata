@@ -6,10 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import soccerteam.data.PlayerRepository;
-import soccerteam.data.TrainerRepository;
 import soccerteam.data.TrainerSpringDataRepository;
-import soccerteam.model.Player;
 import soccerteam.model.Trainer;
 
 import javax.validation.Valid;

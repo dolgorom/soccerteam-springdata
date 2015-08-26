@@ -1,7 +1,6 @@
 package soccerteam.web;
 
 import org.springframework.web.bind.annotation.PathVariable;
-import soccerteam.data.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

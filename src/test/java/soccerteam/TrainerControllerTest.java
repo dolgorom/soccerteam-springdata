@@ -2,10 +2,7 @@ package soccerteam;
 
 import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
-import soccerteam.data.PlayerRepository;
-import soccerteam.data.TrainerRepository;
 import soccerteam.data.TrainerSpringDataRepository;
-import soccerteam.web.PlayerController;
 import soccerteam.web.TrainerController;
 
 import static org.mockito.Mockito.mock;
