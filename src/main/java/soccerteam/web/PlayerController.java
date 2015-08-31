@@ -6,6 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.client.RestTemplate;
 import soccerteam.data.PlayerSpringDataRepository;
 import soccerteam.model.Player;
 
@@ -13,10 +16,14 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 import javax.validation.Valid;
+import java.net.URI;
+import java.util.List;
 
 @Controller
 @RequestMapping("/player")
 public class PlayerController {
+
+    private static final String MAX_LONG_AS_STRING = "9223372036854775807";
 
     private PlayerSpringDataRepository playerRepository;
 
@@ -36,6 +43,7 @@ public class PlayerController {
         return "playerForm";
     }
 
+
     @RequestMapping(value="/register",method = POST)
     public String processRegistration(
                                           @Valid PlayerForm registerForm,
@@ -49,6 +57,8 @@ public class PlayerController {
         return "redirect:/player/" + player.getFirstName() + "_" + player.getSecondName();
 
     }
+
+
 
     @RequestMapping(value="/{firstAndSecond}", method=GET)
     public String  showPlayerProfile(@PathVariable String firstAndSecond, Model model) {

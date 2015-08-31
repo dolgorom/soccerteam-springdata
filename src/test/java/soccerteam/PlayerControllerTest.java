@@ -42,30 +42,7 @@ public class PlayerControllerTest  {
 
     }
 
-    @Test
-    public void testPlayerSave() throws Exception {
 
-        PlayerSpringDataRepository mockRepository = mock(PlayerSpringDataRepository.class);
-        PlayerController controller = new PlayerController(mockRepository);
-        MockMvc mockMvc = standaloneSetup(controller).build();
-
-        Player player = new Player("Bob", "Charlton");
-        mockRepository.save(player);
-        System.out.print(player);
-        player = new Player("Bob", "Charlton");
-        player = mockRepository.save(player);
-        System.out.print(player);
-
-        List<Player> player2 = mockRepository.findByFirstName("Bob");
-        System.out.print(player2);
-
-        Player player3 = mockRepository.findByFirstNameAndSecondName("Bob", "Charlton");
-        System.out.print(player3);
-       // mockMvc.perform(post("/player/register").param("firstName","Bob").param("secondName","Dilan").param("age","22").param("country","canada").param("salary","100000").param("goals","1")
-        //        .param("booking","2").param("position","FORWARD")).andExpect(redirectedUrl("/player/Bob_Dilan"));
-
-
-    }
 
 
 }

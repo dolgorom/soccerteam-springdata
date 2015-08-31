@@ -31,63 +31,6 @@ import java.util.Properties;
 @EnableTransactionManagement
 public class DataConfig {
 
-/*  @Bean
-  public DataSource dataSource() {
-    return new EmbeddedDatabaseBuilder()
-            .setType(EmbeddedDatabaseType.H2)
-            //.addScript("schema.sql")
-            .build();
-  }
-  
-  @Bean
-  public JdbcOperations jdbcTemplate(DataSource dataSource) {
-    return new JdbcTemplate(dataSource);
-  }
-
-    @Bean
-    public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpaVendorAdapter){
-        LocalContainerEntityManagerFactoryBean emfb = new LocalContainerEntityManagerFactoryBean();
-        emfb.setDataSource(dataSource);
-        emfb.setJpaVendorAdapter(jpaVendorAdapter);
-        emfb.setPackagesToScan("soccerteam.model");
-        return emfb;
-    }
-
-    @Bean
-    public JpaVendorAdapter jpaVendorAdapter(){
-        HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
-        //adapter.setDatabase(Database.H2);
-        return adapter;
-    }
-
-    @Bean
-    public PersistenceAnnotationBeanPostProcessor persistenceAnnotationBeanPostProcessor(){
-        return new PersistenceAnnotationBeanPostProcessor();
-    }
-
-    @Bean
-    public PlatformTransactionManager transactionManager(EntityManagerFactory entityManagerFactory) {
-        JpaTransactionManager transactionManager = new JpaTransactionManager();
-        transactionManager.setEntityManagerFactory(entityManagerFactory);
-        return transactionManager;
-    }
-
-    @Bean
-    public BeanPostProcessor persistenceTranslation() {
-        return new PersistenceExceptionTranslationPostProcessor();
-    }
-
-    @Bean
-    public LocalSessionFactoryBean sessionFactory(DataSource dataSource) {
-        LocalSessionFactoryBean sfb = new LocalSessionFactoryBean();
-        sfb.setDataSource(dataSource);
-        sfb.setPackagesToScan(new String[] { "soccerteam.data","soccerteam.model" });
-        Properties props = new Properties();
-        props.setProperty("dialect", "org.hibernate.dialect.H2Dialect");
-        sfb.setHibernateProperties(props);
-        return sfb;
-    }
-  */
 @Bean
 public DataSource dataSource() {
 

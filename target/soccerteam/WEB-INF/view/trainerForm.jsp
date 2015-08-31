@@ -11,7 +11,7 @@
 <body>
 
 <h2>
-  Create your trainer here
+    <spring:message code="create.trainer.message"/>
 </h2>
 <sf:form method="POST" commandName="trainerForm">
     <sf:errors path="*" element="div" cssClass="error"/>
@@ -36,9 +36,8 @@
     <br/>
   <input type="submit" value="Register" />
 
-
 </sf:form>
-<button onclick="document.location='/'" />Cancel</button>
+<button onclick="document.location='/'" /><spring:message code="button.cancel"/></button>
 
 </body>
 </html>

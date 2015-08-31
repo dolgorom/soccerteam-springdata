@@ -21,7 +21,7 @@ import java.util.Locale;
 @Configuration
 @EnableWebMvc
 @EnableSpringDataWebSupport
-@ComponentScan({"soccerteam.web"})
+@ComponentScan({"soccerteam.web","soccerteam.data"})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
   @Bean
@@ -69,5 +69,6 @@ public class WebConfig extends WebMvcConfigurerAdapter {
     interceptor.setParamName("mylocale");
     registry.addInterceptor(interceptor);
   }
+
 
 }

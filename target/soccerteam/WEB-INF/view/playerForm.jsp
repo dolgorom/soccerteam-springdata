@@ -11,7 +11,7 @@
 </head>
 
 <h2>
-    Create your player here
+    <spring:message code="create.player.message"/>
 </h2>
 <sf:form method="POST" commandName="playerForm">
     <sf:errors path="*" element="div" cssClass="error"/>
@@ -62,11 +62,11 @@
 
 
     <br/>
-    <input type="submit" value="Register"/>
+    <input type="submit" value="Register" />
 
 </sf:form>
 
-<button onclick="document.location='/'" />Cancel</button>
+<button onclick="document.location='/'" /> <spring:message code="button.cancel"/></button>
 
 </body>
 </html>
